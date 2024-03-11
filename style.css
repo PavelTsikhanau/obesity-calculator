@@ -50,10 +50,16 @@ input {
   width: 60%;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 4rem;
-  height: 15rem;
+  font-size: calc(24px + (16 + 16 * 0.7) * (100vw / 1280));
+  height: auto;
   padding: 3rem;
   background-color: #e7e7e7;
   border-radius: 5px;
   box-shadow: 0px 0px 10px #000;
+}
+
+@media (max-width: 767px) {
+  .popup .popup-content {
+    font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+  }
 }
